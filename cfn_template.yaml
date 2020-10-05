@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  Globaldownloads:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: my_handler.handler
+      Runtime: python3.8
+      CodeUri: ./index.py
+      MemorySize: 128
+      Timeout: 50
+      Role: 'arn:aws:iam::803314449489:role/lambda_basic_execution'
